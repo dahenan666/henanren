@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>string</title>
+</head>
+<body>
+	<script>
+		/*
+		string
+		 */
+		// let str='abcdabcd'
+        // console.log(str.charAt(2));
+        // console.log(str.charCodeAt(2));
+        // console.log(String.fromCharCode(98));
+        // let index=str.indexOf('abcd');
+        // let index1=str.lastIndexOf('abcde')
+        // console.log(index1);
+        /*里面是否纯在一个字符串*/
+        // let includes=str.includes('ab');
+        // alert(includes);
+        // let str='abcdefgabcd'
+        // let str1=str.slice(0,4);
+        //  console.log(str1);
+        // let replace=str.replace('abcd','****');     
+        // str=str.replace('abcd','****');
+        // str=str.replace('abcd','****');
+        // console.log(str);
+        
+        
+        // let str='abcdabcd'
+        // function replaceAll(str,rStr){
+        // 	let star ='';/*  let star ='*'.repeat(rStr.length);  */
+        // 	for(let i=0;i<rStr.length;i++){
+        // 		star=star+'*';
+        // 	}
+        //        while(str.includes(rStr)){
+        //        	str.replace(rStr,star)
+        //        	str=str.replace(rStr,star)
+        //        }
+        //        return  str;
+        // }
+        // var result=replaceAll(str,'abc');
+        //  console.log(result);
+
+      
+       // let str='abcd';
+       // let arr=str.split('-');
+       // console.log(arr);
+       // let str1='ABCD';
+       // let str2='abcd'
+       // console.log(str2.toUpperCase());
+       // console.log(str1.toLowerCase());
+       // document.write(str.fontcolor('red'));
+       // document.write(str.fontsize(7));
+          let url='http://www.baidu.comhttp://www.baidu.comhttp://www.baidu.comhttp://www.baidu.comhttp://www.baidu.comhttp://www.baidu.comhttp://www.baidu.comhttp://www.baidu.comhttp://www.baidu.comhttp://www.baidu.comhttp://www.baidu.com'
+
+               /*不能显示位置*/
+            // function replaceAll(url,rurl){
+            //      let srr='*'.repeat(rurl.length);    /*星星个数*/
+            // 	while(url.includes(rurl)){           		
+            // 			url.replace(rurl,srr)     /*替换*/
+            // 		url=url.replace(rurl,srr)       /*更新*/
+           	// 	}           		
+            	
+            // 	return url;
+            // }
+            // var result=replaceAll(url,'com');
+            // console.log(result);
+
+                /*显示位置*/
+                function replaceAll(str,rstr){
+                	let arr=[];
+                	let srr='*'.repeat(rstr.length);
+                	while(str.includes(rstr)){
+                		arr.push(str.indexOf(rstr));
+                		str=str.replace(rstr,srr);
+
+                	}
+                	return arr;
+                }
+
+                 var result=replaceAll(url,'baidu');
+                 console.log(result);
+       </script>
+</body>
+</html>
