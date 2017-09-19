@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	ul{
+		width: 180px;
+		height: 20px;
+
+	}
+	li{
+		width: 20px;
+		height: 20px;
+		background: red;
+		border-radius: 50%;
+		margin-right: 10px;
+		float: left;
+		list-style: none;
+		cursor: pointer;
+	}
+	.lili{
+		background: orange;
+	}
+	</style>
+</head>
+<body>
+   <div>
+   		<ul class='haha'>
+   			<li></li>
+   			<li></li>
+   			<li></li>
+   			<li></li>
+   			<li></li>
+   			<li></li>
+   		</ul>
+   	</div>	
+</body>
+</html>
+<script>
+	let hahas=document.getElementsByClassName('haha')
+	let lis=hahas[0].getElementsByTagName('li')
+	for(let i=0;i<lis.length;i++){
+		lis[i].onclick=function(){
+			lis[i].style.background='yellow';
+		}
+	}
+	/*批量修改元素样式*/
+	// for(let i=0;i<lis.length;i++){
+	// 	lis[i].className='lili'
+	// }
+	// 
+	/*window的一种方法*/
+    console.log(getComputedStyle(hahas[0], null));
+</script>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	button{
+		padding: 10px;
+		background: orange;
+		border: none;
+	}
+     #datou{
+     	width: 98px;
+     	height: 500px;
+     	background: red;
+     	margin-top: 15px;
+     	transition: .2s;
+     }
+	</style>
+</head>
+<body>
+	<button>收起</button>
+	<button>展开</button>
+	<button>点击</button>
+	<div id="datou"></div>
+</body>
+</html>
+<script>
+	let buttons=document.getElementsByTagName('button');
+	let datous=document.getElementById('datou');
+     // buttons[0].onclick=function(){
+     // 	datous.style.height='500px'
+     // }
+     // buttons[1].onclick=function(){
+     // 	datous.style.height=0;
+     // }
+       let falg=true;
+     buttons[2].onclick=function(){
+         if(falg){
+         	datous.style.height=0;
+         	falg=false;
+     }else{
+     	     datous.style.height='500px';
+     	     falg=true;
+     }
+ }
+ 
+</script>

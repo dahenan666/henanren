@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>放大缩小</title>
+	<style>
+	.datou{
+		width: 400px;
+		height:400px;
+		background: red;
+		margin: 10px auto; 
+	}
+	</style>
+
+</head>
+<body>
+	<div class="datou">
+		
+	</div>
+</body>
+</html>
+<script>
+	let datous=document.getElementsByClassName('datou')[0];
+	let t;
+	t=setInterval(fn,50)
+	let speed=10;
+	function fn(){
+		let w=parseInt(getComputedStyle(datous,null).width);
+		let h=parseInt(getComputedStyle(datous,null).height);
+		if(w>=600 && h>500){
+			// clearInterval(t)
+			speed=-speed;
+		}else if(w<400 && h<200){
+			speed=-speed
+
+		}		
+		  datous.style.width=`${w+speed}px`
+		  datous.style.height=`${h+speed}px`	
+	}
+</script>
